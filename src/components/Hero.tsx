@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import DashboardImage from './DashboardImage';
 
 const Hero = () => {
   const [email, setEmail] = useState('');
@@ -116,26 +117,12 @@ const Hero = () => {
           
           {/* Right column - illustration */}
           <motion.div
-            className="hidden lg:block" 
+            className="lg:block" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="relative w-full aspect-square max-w-lg mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-tr from-saas-purple to-saas-blue opacity-10 rounded-full animate-pulse-slow" />
-              <div className="absolute left-[10%] top-[10%] w-[80%] h-[80%] bg-white rounded-xl shadow-xl p-4">
-                <div className="h-4 w-24 bg-saas-purple/10 rounded mb-4" />
-                <div className="h-8 w-3/4 bg-saas-blue/10 rounded mb-6" />
-                <div className="space-y-3">
-                  <div className="h-4 w-full bg-gray-100 rounded" />
-                  <div className="h-4 w-5/6 bg-gray-100 rounded" />
-                  <div className="h-4 w-4/6 bg-gray-100 rounded" />
-                </div>
-                <div className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-hero-gradient flex items-center justify-center text-white font-bold">
-                  AI
-                </div>
-              </div>
-            </div>
+            <DashboardImage />
           </motion.div>
         </div>
       </div>
